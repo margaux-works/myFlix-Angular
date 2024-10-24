@@ -104,7 +104,7 @@ export class FetchApiDataService {
   // edit user details
   public editUser(Username: string, userDetails: any): Observable<any> {
     return this.http
-      .post(apiUrl + `users/${Username}`, userDetails, {
+      .put(apiUrl + `users/${Username}`, userDetails, {
         headers: this.getHeaders(),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
@@ -135,7 +135,8 @@ export class FetchApiDataService {
       console.error('Some error occurred:', error.error.message);
     } else {
       console.error(
-        `Error Status code ${error.status}, ` + `Error body is: ${error.error}`
+        `Error Status code ${error.status}, ` +
+          `Error body is: ${JSON.stringify(error.error)}`
       );
     }
     return throwError('Something bad happened; please try again later.');
