@@ -93,7 +93,7 @@ export class FetchApiDataService {
     MovieID: string
   ): Observable<any> {
     return this.http
-      .post(
+      .put(
         apiUrl + `users/${Username}/movies/${MovieID}`,
         {},
         { headers: this.getHeaders() }

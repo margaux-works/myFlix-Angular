@@ -1,5 +1,5 @@
-<div style="display: flex">
-  <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
+<div class="grid-container">
+  <mat-card *ngFor="let movie of movies" class="movie-card">
     <mat-card-header>
       <mat-card-title>{{ movie.Title }}</mat-card-title>
       <mat-card-subtitle
@@ -10,14 +10,19 @@
     <mat-card-actions>
       <button
         mat-button
-        color="primary"
+        color="secondary"
         [routerLink]="['/movies', movie.Title]"
       >
         See More
       </button>
-      <button mat-button color="primary">Genre</button>
-      <button mat-button color="primary">Director</button>
-      <mat-icon>favorite_border</mat-icon>
+
+      <mat-icon
+        (click)="toggleFavorite(movie._id)"
+        color="warn"
+        style="cursor: pointer"
+      >
+        {{ isFavorite(movie._id) ? "favorite" : "favorite_border" }}
+      </mat-icon>
     </mat-card-actions>
   </mat-card>
   <button mat-raised-button [routerLink]="['/profile']">Profile</button>

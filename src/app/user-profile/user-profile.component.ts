@@ -9,11 +9,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class UserProfileComponent {
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
+  favoriteMovies: any[] = [];
 
   constructor(
     private fetchApiData: FetchApiDataService,
     private snackBar: MatSnackBar
   ) {}
+
   ngOnInit(): void {
     this.getUser(); // Fetch user details when component is initialized
   }
