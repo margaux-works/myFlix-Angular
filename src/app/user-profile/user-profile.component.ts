@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
 
 @Component({
   selector: 'app-user-profile',
@@ -13,7 +16,9 @@ export class UserProfileComponent implements OnInit {
 
   constructor(
     private fetchApiData: FetchApiDataService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    public dialog: MatDialog,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -55,6 +60,41 @@ export class UserProfileComponent implements OnInit {
         this.snackBar.open('Error updating user', 'OK', {
           duration: 2000,
         });
+      }
+    );
+  }
+
+  openDeleteConfirmation(): void {
+    const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent);
+    dialogRef.afterClosed().subscribe((confirmed: boolean) => {
+      if (confirmed) {
+        this.deleteAccount();
+      }
+    });
+  }
+
+  deleteAccount(): void {
+    const username = this.userData.Username;
+    this.fetchApiData.deleteUser(username).subscribe(
+      (response: any) => {
+        console.log('Account deleted:', response);
+        this.snackBar.open('Account deleted successfully', 'OK', {
+          duration: 2000,
+        });
+
+        // Clear local storage and navigate to welcome page
+        localStorage.clear();
+        this.router.navigate(['/welcome']);
+      },
+      (error) => {
+        console.error('Error deleting user account:', error);
+        this.snackBar.open(
+          'Failed to delete account. Please try again.',
+          'OK',
+          {
+            duration: 2000,
+          }
+        );
       }
     );
   }

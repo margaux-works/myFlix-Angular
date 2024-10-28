@@ -113,8 +113,17 @@ export class FetchApiDataService {
   // delete a user
   public deleteUser(Username: string): Observable<any> {
     return this.http
-      .delete(apiUrl + `users/${Username}`, { headers: this.getHeaders() })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .delete(apiUrl + `users/${Username}`, {
+        headers: this.getHeaders(),
+        responseType: 'text', // Set the responseType to 'text' to handle the plain text response
+      })
+      .pipe(
+        map((response: any) => {
+          console.log('Delete user response:', response);
+          return response;
+        }),
+        catchError(this.handleError)
+      );
   }
 
   // Delete a movie from favorite movies

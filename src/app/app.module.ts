@@ -26,6 +26,7 @@ import { DirectorDetailsComponent } from './director-details/director-details.co
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { GenreDetailsComponent } from './genre-details/genre-details.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DeleteConfirmationDialogComponent } from './delete-confirmation-dialog/delete-confirmation-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     MovieDetailsComponent,
     GenreDetailsComponent,
     NavBarComponent,
+    DeleteConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,
