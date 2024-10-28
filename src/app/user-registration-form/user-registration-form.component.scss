@@ -1,0 +1,29 @@
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  max-width: 80vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: transparent !important; // Set input background to transparent
+}
+
+::ng-deep .mat-mdc-form-field-flex {
+  background-color: transparent !important; // Another wrapper in MDC inputs that may need setting
+}
+
+.centered-title {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: #161d2f;
+}

@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Edit Profile</mat-card-title>
+    <mat-card-title class="custom-title">Edit Profile</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <form>
@@ -56,19 +56,21 @@
   </mat-card-actions>
 
   <!-- Favorite Movies -->
-  <mat-card-title>Favorite Movies</mat-card-title>
+  <mat-card-header>
+    <mat-card-title class="favorite-title">Favorite Movies</mat-card-title>
+  </mat-card-header>
+
   <div style="display: flex">
     <mat-card
       *ngFor="let movie of this.favoriteMovies"
-      style="width: 280px; margin-right: 10px"
+      style="width: 280px; margin-right: 10px; background-color: #161d2f"
     >
-      <mat-card-header>
-        <mat-card-title>{{ movie.Title }}</mat-card-title>
-        <mat-card-subtitle
-          >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
-        >
-      </mat-card-header>
       <img src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-subtitle
+        >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
+      >
+
       <mat-card-actions>
         <button
           mat-raised-button
@@ -82,3 +84,6 @@
     </mat-card>
   </div>
 </mat-card>
+<button mat-raised-button class="back-to" [routerLink]="['/movies']">
+  Back to Movies
+</button>

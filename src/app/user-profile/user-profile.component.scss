@@ -1,0 +1,25 @@
+.mat-mdc-card {
+  background-color: #10141e;
+  padding: 1rem;
+}
+
+.custom-title {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.mat-mdc-card-subtitle {
+  font-size: 0.9rem;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}
+
+.favorite-title {
+  padding-bottom: 1rem;
+}
+
+.back-to {
+  margin: 1rem;
+}
