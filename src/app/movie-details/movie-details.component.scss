@@ -8,6 +8,12 @@
   margin-bottom: 1rem;
   margin-left: 2rem;
   margin-top: 1rem;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .mat-mdc-card-header {
@@ -31,6 +37,7 @@ p {
 
 .back-to {
   margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .movie-tag {

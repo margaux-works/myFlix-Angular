@@ -56,34 +56,36 @@
   </mat-card-actions>
 
   <!-- Favorite Movies -->
-  <mat-card-header>
-    <mat-card-title class="favorite-title">Favorite Movies</mat-card-title>
-  </mat-card-header>
+  <div class="favorite-movies">
+    <mat-card-header>
+      <mat-card-title class="favorite-title">Favorite Movies</mat-card-title>
+    </mat-card-header>
 
-  <div style="display: flex">
-    <mat-card
-      *ngFor="let movie of this.favoriteMovies"
-      style="width: 280px; margin-right: 10px; background-color: #161d2f"
-    >
-      <img src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
-      <mat-card-title>{{ movie.Title }}</mat-card-title>
-      <mat-card-subtitle
-        >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
+    <div class="favorite-movies-container">
+      <mat-card
+        *ngFor="let movie of this.favoriteMovies"
+        style="width: 280px; margin-right: 10px; background-color: #161d2f"
       >
-
-      <mat-card-actions>
-        <button
-          mat-raised-button
-          (click)="removeFromFavorite(movie._id)"
-          color="primary"
-          style="margin-right: 10px"
+        <img src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+        <mat-card-title>{{ movie.Title }}</mat-card-title>
+        <mat-card-subtitle
+          >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
         >
-          Remove from favorite
-        </button>
-      </mat-card-actions>
-    </mat-card>
+
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            (click)="removeFromFavorite(movie._id)"
+            color="primary"
+            style="margin-right: 10px"
+          >
+            Remove from favorite
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </mat-card>
-<button mat-raised-button class="back-to" [routerLink]="['/movies']">
-  Back to Movies
-</button>
+<div class="back-to-container">
+  <button mat-raised-button [routerLink]="['/movies']">Back to Movies</button>
+</div>
