@@ -41,7 +41,7 @@ The **myFlix** is a single-page, responsive movie application built with Angular
 
 ## Screenshots
 
-<img src="/src/assets/movie-view.png" alt="Most List View" width="400" />
+<img src="/src/assets/movie-card.png" alt="Most List View" width="400" />
 <img src="/src/assets/movie-view.png" alt="Movie View" width="400" />
 <img src="/src/assets/director-modal.png" alt="Director Modal" width="400" />
 <img src="/src/assets/profile-view.png" alt="Profile View" width="400" />
