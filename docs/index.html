@@ -1,0 +1,134 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>MyFlix Angular Documentation - v0.0.0</title><meta name="description" content="Documentation for MyFlix Angular Documentation"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">MyFlix Angular Documentation - v0.0.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>MyFlix Angular Documentation - v0.0.0</h1></div><div class="tsd-panel tsd-typography"><a id="md:myflix" class="tsd-anchor"></a><h1 class="tsd-anchor-link">myFlix<a href="#md:myflix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>The <strong>myFlix</strong> is a single-page, responsive movie application built with Angular that allows users to browse and learn about various movies. With features like user registration, movie details, and a user profile, the app provides a seamless experience for movie enthusiasts. Developed using Angular Material and TypeScript, myFlix is designed to work across all devices, ensuring users can access movie information wherever they are.</p>
+<a id="md:features" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Features<a href="#md:features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li>
+<p><strong>User Authentication</strong></p>
+<ul>
+<li>Users can register an account and log in to access personalized features.</li>
+</ul>
+</li>
+<li>
+<p><strong>Browse Movies</strong></p>
+<ul>
+<li>Users can view a list of available movies, complete with descriptions and additional details.</li>
+</ul>
+</li>
+<li>
+<p><strong>Single Movie View</strong></p>
+<ul>
+<li>Clicking on a movie will navigate to a dedicated view displaying detailed information about that movie, including:
+<ul>
+<li>A button to view information about the director.</li>
+<li>A button to view information about the genre.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Edit User Data</strong></p>
+</li>
+<li>
+<p>Clicking on 'My profile' will navigate to a dedicated view displaying user data, including:</p>
+<ul>
+<li>A form to allow the user to edit their data</li>
+<li>A button to allow the user to delete their account</li>
+<li>The list of their favorite movies, with a button to remove a movie from that list</li>
+</ul>
+</li>
+<li>
+<p><strong>Responsive Design</strong></p>
+<ul>
+<li>The app is designed to work seamlessly on all devices, providing an equal experience for all users.</li>
+</ul>
+</li>
+</ul>
+<a id="md:tech-stack" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Tech Stack<a href="#md:tech-stack" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><strong>Angular</strong>: Framework for building the client-side application.</li>
+<li><strong>Angular Material</strong>: UI component library for Angular applications.</li>
+<li><strong>Node.js</strong>: JavaScript runtime for the server-side application.</li>
+<li><strong>Express</strong>: Framework for building the REST API.</li>
+<li><strong>MongoDB</strong>: NoSQL database for storing movie and user data.</li>
+<li><strong>TypeScript</strong>: Superset of JavaScript used for building the app.</li>
+<li><strong>JSDoc</strong>: Documentation tool for generating API documentation from comments in the codebase.</li>
+<li><strong>GitHub Pages</strong>: For hosting the application.</li>
+</ul>
+<a id="md:screenshots" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Screenshots<a href="#md:screenshots" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><img src="/src/assets/movie-card.png" alt="Most List View" width="400" />
+<img src="/src/assets/movie-view.png" alt="Movie View" width="400" />
+<img src="/src/assets/director-modal.png" alt="Director Modal" width="400" />
+<img src="/src/assets/profile-view.png" alt="Profile View" width="400" />
+<a id="md:scenarios-given-when-then" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Scenarios (Given-When-Then)<a href="#md:scenarios-given-when-then" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>Feature 1: User Authentication</strong></p>
+<ul>
+<li>Scenario: User logs in
+<ul>
+<li>Given the user is on the login page</li>
+<li>When the user enters their credentials and clicks &quot;Login&quot;</li>
+<li>Then the user should be redirected to the movie list.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Feature 2: Browse Movies</strong></p>
+<ul>
+<li>Scenario: User views the movie list
+<ul>
+<li>Given the user is logged in</li>
+<li>When the user navigates to the movie list</li>
+<li>Then the user should see all available movies displayed.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Feature 3: Single Movie View</strong></p>
+<ul>
+<li>Scenario: User views a specific movie
+<ul>
+<li>Given the user clicks on a movie in the list</li>
+<li>When the user is redirected to the movie view</li>
+<li>Then the user should see detailed information about that movie.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Feature 4: View Director Information</strong></p>
+<ul>
+<li>Scenario: User views the director's details
+<ul>
+<li>Given the user is on a movie view</li>
+<li>When the user clicks the button to view the director</li>
+<li>Then the user should be taken to the director's detail view.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Feature 5: View Genre Information</strong></p>
+<ul>
+<li>Scenario: User views genre details
+<ul>
+<li>Given the user is on a movie view</li>
+<li>When the user clicks the button to view the genre</li>
+<li>Then the user should be taken to the genre's detail view.</li>
+</ul>
+</li>
+</ul>
+<a id="md:development-status" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Development Status<a href="#md:development-status" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>🚧 This project is currently under development.</p>
+<a id="md:deployment--setup-the-app" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Deployment / Setup the app<a href="#md:deployment--setup-the-app" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Follow these steps to set up and run your myFlix app.</p>
+<a id="md:prerequisites" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Prerequisites<a href="#md:prerequisites" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Before you begin, ensure that you have the following software installed on your development machine:</p>
+<ul>
+<li>Node.js (version 16.x or later recommended)</li>
+<li>Angular CLI</li>
+<li>MongoDB (for the backend API)</li>
+</ul>
+<a id="md:1-clone-the-repository" class="tsd-anchor"></a><h3 class="tsd-anchor-link">1. Clone the repository<a href="#md:1-clone-the-repository" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>git clone <a href="https://github.com/your-username/myFlix.git" target="_blank" class="external">https://github.com/your-username/myFlix.git</a> cd myFlix</p>
+<a id="md:2-install-dependencies" class="tsd-anchor"></a><h2 class="tsd-anchor-link">2. Install Dependencies<a href="#md:2-install-dependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Once inside the project directory, install all necessary packages:
+<code>npm install</code></p>
+<a id="md:3-running-the-app" class="tsd-anchor"></a><h3 class="tsd-anchor-link">3. Running the App<a href="#md:3-running-the-app" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>After installing dependencies, you can run the app locally using:
+<code>ng serve</code></p>
+<p>Open your browser and navigate to <code>http://localhost:4200/</code>.</p>
+<a id="md:4-running-the-backend" class="tsd-anchor"></a><h3 class="tsd-anchor-link">4. Running the Backend<a href="#md:4-running-the-backend" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Ensure your backend server is running to serve the REST API. Follow the instructions in the backend repository to set up and run the server.</p>
+<a id="md:libraries-used" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Libraries Used<a href="#md:libraries-used" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Here are the main libraries that this app depends on:</p>
+<ul>
+<li>Angular - 13.x</li>
+<li>Angular Material - 13.x</li>
+<li>Node.js - 16.x</li>
+<li>Express - 4.x</li>
+<li>MongoDB - 5.x</li>
+<li>TypeScript - 4.x</li>
+</ul>
+<a id="md:contributing" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Contributing<a href="#md:contributing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Contributions are welcome! Please fork this repository and submit a pull request.</p>
+<a id="md:license" class="tsd-anchor"></a><h2 class="tsd-anchor-link">License<a href="#md:license" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This project is licensed under the MIT License.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:myflix"><span>my<wbr/>Flix</span></a><ul><li><a href="#md:features"><span>Features</span></a></li><li><a href="#md:tech-stack"><span>Tech <wbr/>Stack</span></a></li><li><a href="#md:screenshots"><span>Screenshots</span></a></li><li><a href="#md:scenarios-given-when-then"><span>Scenarios (<wbr/>Given-<wbr/>When-<wbr/>Then)</span></a></li><li><a href="#md:development-status"><span>Development <wbr/>Status</span></a></li><li><a href="#md:deployment--setup-the-app"><span>Deployment / <wbr/>Setup the app</span></a></li><li><ul><li><a href="#md:prerequisites"><span>Prerequisites</span></a></li><li><a href="#md:1-clone-the-repository"><span>1. <wbr/>Clone the repository</span></a></li></ul></li><li><a href="#md:2-install-dependencies"><span>2. <wbr/>Install <wbr/>Dependencies</span></a></li><li><ul><li><a href="#md:3-running-the-app"><span>3. <wbr/>Running the <wbr/>App</span></a></li><li><a href="#md:4-running-the-backend"><span>4. <wbr/>Running the <wbr/>Backend</span></a></li></ul></li><li><a href="#md:libraries-used"><span>Libraries <wbr/>Used</span></a></li><li><a href="#md:contributing"><span>Contributing</span></a></li><li><a href="#md:license"><span>License</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>MyFlix Angular Documentation - v0.0.0</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
