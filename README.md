@@ -1,4 +1,4 @@
-# myFlix
+# myFlix (Angular)
 
 The **myFlix** is a single-page, responsive movie application built with Angular that allows users to browse and learn about various movies. With features like user registration, movie details, and a user profile, the app provides a seamless experience for movie enthusiasts. Developed using Angular Material and TypeScript, myFlix is designed to work across all devices, ensuring users can access movie information wherever they are.
 
