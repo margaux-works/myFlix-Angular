@@ -41,6 +41,17 @@ export class FetchApiDataService {
       .pipe(catchError(this.handleError));
   }
 
+  // login as ques
+  public guestLogin(): Observable<any> {
+    const guestCredentials = {
+      Username: 'guest',
+      Password: 'guest',
+    };
+    return this.http
+      .post(apiUrl + 'login', guestCredentials)
+      .pipe(catchError(this.handleError));
+  }
+
   // get all movies
   public getAllMovies(): Observable<any> {
     return this.http
